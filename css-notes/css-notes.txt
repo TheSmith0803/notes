@@ -1,0 +1,62 @@
+font-family: decides the font style
+    if the browser doesnt support the font selected
+    it will select the next available font 
+    supported by that browser.
+
+font-size: 
+    pretty self explanitory
+
+font-weight:
+    affects the boldness of text. the value can be
+    a keyword such as - font-weight: bold, and also 
+    a number between 1-1000, ex. font-weight: 700
+    (700 = the equivilant of bold font)
+    Usually numeric value will be in increments of 100
+    up to 900, though this will depend upon the type
+    of font being used.
+
+text-align:
+    will align text horizontally within an element.
+    Keywords may be used such as -- text-align: center
+
+Image height and width:
+    if you just simply want to adjust size of an Image 
+    in CSS, you must assign the height to auto, and then 
+    define the size of the image with the width factor.
+
+    HOWEVER, it is smart to put in the height element 
+    regardless, because if it is set to auto, and it takes 
+    longer to load than the rest of the page, then it will cause a 
+    drastic shift of the other page contents when it does 
+    end up loading in
+
+    explicity statin a height and width makes it so the 
+    space will already be reserved when the page loads.
+
+The Cascade of CSS:
+    The cascade is what determines which rules actually get applied 
+    to our HTML. There are different factors that the cascade uses 
+    to determine this, three of which we’ll go over to hopefully 
+    help you avoid (as many of) those frustrating 
+    “I hate CSS” moments.
+
+Spececifity:
+    Essentially, you can think of CSS rules in terms 
+    of a point system (sort of):
+        -ID selector: 100
+        -Class selector, attribute selector, and pseudo-class selector: 10
+        -Type selector and pseudo-element selector: 1
+        -Universal selector, combinators, and negation pseudo-class: 0 
+             (does not contribute to specificity)^^
+
+Inheritance:
+    Refers to certain CSS properties that, when applied to an element, 
+    are inherited by that element’s descendants, even if we don’t 
+    explicitly write a rule for those descendants.
+
+    The exception to this is when an element is directly targeted, 
+    as this always beats Inheritance.
+
+
+
+

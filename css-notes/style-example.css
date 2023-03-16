@@ -1,0 +1,67 @@
+p {
+    /* hex example */
+    color: #1100ff;
+    /* rgb example */
+    color: rgb(100, 0, 127);
+    /* hsl example */
+    color: hsl(15, 82%, 56%);
+}
+
+/* image sizing example */
+
+img {
+    height: auto;
+    width: 500px;
+  }
+
+  /*Here is some HTML code in this CSS thingy lol*/
+
+  <!-- index.html -->
+
+  <div class="main">
+    <div class="list subsection"></div>
+  </div>
+
+/*and below is the CSS code it relates to*/
+
+  /* rule 1 */
+.subsection {
+    color: blue;
+  }
+  
+  /* rule 2 */
+  .main .list {
+    color: red;
+  }
+
+  /*in the example below both rule 1 and rule 2 have the same specificity. 
+  Rule 1 uses a chaining selector (no space) and rule 2 uses a descendant 
+  combinator (the empty space). But both rules have two classes and the 
+  combinator symbol itself does not add to the specificity.*/
+
+  /* rule 1 */
+.class.second-class {
+    font-size: 12px;
+  }
+  
+  /* rule 2 */
+  .class .second-class {
+    font-size: 24px;
+  }
+
+  /*This next example shows the same thing. Even though rule 2 is using 
+  a child combinator (>), this does not change the specificity value. 
+  Both rules still have two classes so they have the same specificity 
+  values*/
+
+  /* rule 1 */
+.class.second-class {
+    font-size: 12px;
+  }
+  
+  /* rule 2 */
+  .class > .second-class {
+    font-size: 24px;
+  }
+
+  
