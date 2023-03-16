@@ -57,6 +57,75 @@ Inheritance:
     The exception to this is when an element is directly targeted, 
     as this always beats Inheritance.
 
+Rule order:
+    If a set of rules have equal specificity, such as two class rules,
+    then CSS will simply apply the last stated rule
+
+Adding CSS to HTML  
+    External CSS is the most common method you will come across, 
+    and it involves creating a separate file for the CSS and linking 
+    it inside of an HTML’s opening and closing <head> tags with a 
+    self-closing <link> element
+
+    example:
+        <!-- index.html -->
+
+        <head>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+
+INTERNAL CSS:
+    Internal CSS (or embedded CSS) adding the CSS within the 
+    HTML file itself instead of creating a completely 
+    separate file.
+
+    To do this you need to place a '<style>' element 
+    with opening and closing tags inside the '<head>'
+    tags of your HTML file.
+
+    And since the style tags are being placed directly
+    in the head tags, we no longer need a link element
+
+    you can then write your CSS code within your HTML
+    document within the '<style>' tags.
+
+INLINE CSS:
+    Inline CSS makes it possible to add styles directly 
+    to HTML elements, though this method isn’t as 
+    recommended
+
+    for example, consider this code:
+
+    <body>
+        <div style="color: white; background-color: black;">...</div>
+    </body>
+
+    note that no selectors are used here, because the 
+    styles are being added directly to the opening tag
+    ( <div> )
+
+    If you need to add a unique style for a single element, 
+    this method can work just fine. Generally, though, this 
+    isn’t exactly a recommended way for adding CSS to HTML 
+    for a few reasons:
+
+        - It can quickly become pretty messy once you start adding 
+        a lot of declarations to a single element, causing your 
+        HTML file to become unnecessarily bloated.
+        
+        - If you want many elements to have the same style, you 
+        would have to copy + paste the same style to each 
+        individual element, causing lots of unnecessary repetition 
+        and more bloat.
+        
+        - Any inline CSS will override the other two methods, 
+        which can cause unexpected results. (While we won’t 
+        dive into it here, this can actually be taken advantage of).
+
+
+
+
+
 
 
 
