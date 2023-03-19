@@ -230,7 +230,37 @@ WHAT IS THE CSS BOX MODEL?????
         larger than its content if you explicitly add 
         'width' and 'height' properties.
 
-        
+        ENDING QUESTIONS:
+
+From inside to outside, what is the order of box-model properties?
+    content, padding, border, margin
+
+What does the box-sizing CSS property do?
+    Lets you specify how the dimensions of 
+    a box are calculated. 'content-box' (default)
+    will calculate width and height based upon the 
+    content of the element.
+
+    'border-box' will make the defined 'width' and 
+    'height' the actual width and height defined,
+    and will put all padding and border within those
+    defined dimensions.
+
+What is the difference between the standard and alternative box model?
+    pretty much answered in the last question. content-box 
+    or border-box
+
+Would you use margin or padding to create more space between 2 elements?
+    margin
+
+Would you use margin or padding to create more space between the 
+contents of an element and its border?
+    padding
+
+Would you use margin or padding if you wanted two elements to 
+overlap each other?
+    margin
+
         
 
 
