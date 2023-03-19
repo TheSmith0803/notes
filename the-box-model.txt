@@ -81,4 +81,164 @@ INNER DISPLAY TYPE:
 
 
 
+WHAT IS THE CSS BOX MODEL?????
+
+    The CSS box model as whole applies tp block boxes and 
+    defines how the different parts of a box -- margin, border, 
+    padding, and content -- work together to create a box that you
+    can see on a page. Inline boxes use just some of the behavior
+    defined in the box model.
+
+    To add complexity, there is a standard and alternate box model.
+    By default, browsers use the standard box model.
+
+    PARTS OF A BOX:
+
+    making up a block box in CSS we have the: -->
+
+        - Content box: The areea where your content is displayed;
+        size it using properties like 'inline-size', and 'block-size',
+        or 'width' and 'height'.
+        - Padding box: The padding sits around the content as a 
+        white space; size it using 'padding' and related properties.
+        - Border box: The border box wraps the content and any padding;
+        size it using 'border' and related properties.
+        - Margin box: The margin is the outermost layer, wrapping the 
+        content, padding, and border as whitespace between this box 
+        and other elements; size it using 'margin' and related properties.
+
+        check this out lol box-model.png (in notes dir)
+
+        THE STANDARD CSS BOX MODEL:
+
+        In the standard box model, if you give a box an 'inline-size'
+        and a 'block-size' (or 'width' and a 'height') attributes,
+        this defines the inline-size and block-size (width and height 
+        in horizontal languages) of the CONTENT BOX. Any padding and 
+        border is then added to those dimensions to get the total size 
+        taken up by the box.
+
+        THE ALTERNATIVE CSS BOX MODEL:
+
+        In the alternative box model, any width is the width of the
+        visible box on the page. The content area width is that width 
+        minus the width for the padding and border. No need to add up the
+        border and padding to get the real size of the box.
+
+        to turn on the alternatvie model for an elemnt, set 
+        'box-sizing: border-box; on it:
+
+        /*CSS code*/
+        
+        .box {
+            box-sizing: border-box;
+        }
+        
+        /*CSS code*/
+
+        if we assume the box has the same CSS as in 
+        an example in the standard method:
+
+        /*CSS code*/
+
+        .box {
+            width: 350px;
+            inline-size: 350px;
+            height: 150px;
+            block-size: 150px;
+            margin: 10px;
+            padding: 25px;
+            border: 5px solid black;
+        }
+
+        /*CSS code*/
+
+        To use the alternative box model for all of your elements 
+        (which is a common choice among developers), set the 
+        box-sizing property on the <html> element and set all 
+        other elements to inherit that value:
+
+
+        /*CSS code*/
+
+        html {
+        box-sizing: border-box;
+        }
+        *,
+        *::before,
+        *::after {
+        box-sizing: inherit;
+        }
+
+        /*CSS code*/
+
+        REMEMBER: When two boxes are next to eachother,
+        the margins overlap! The largest margin will be used.
+        In the event of a positive margin combined with a 
+        negative margin, the amount of the negative margin
+        will be added to that of the positive one.
+        So subtract the positive version of the negative 
+        margin from the other positive margin.
+
+        BORDERS:
+        The border is drawn between the margin and the 
+        padding of a box. If you are using the standard box model, 
+        the size of the border is added to the width and height of
+        the content box, If you are using the alternative box model 
+        then the size of the border makes the content box smaller as 
+        it takes up some of that available height and width of the 
+        element box.
+
+        PADDING:
+        The padding sits between the border and the content area 
+        and i sused to push the content away from the border. Unlike margins,
+        you cannot have a negative padding. Any background applied to your
+        element wwill display behind the padding.
+
+        The padding property controls the padding on all sides of an 
+        elemnt, but you can control them individually, with properties 
+        such as: 'padding-top: 20px;'
+
+        THE BOX MODEL AND INLINE BOXES:
+
+        For example, when you create a <span> element within HTML <p>
+        elemnt, it gives whatever is located in between the <span>
+        tags its very own box. However by default height and width controls
+        will be ignored by this box, while the vertical margin, padding, and
+        border will be respected. These elements will still not change the 
+        relationship of other content to this box though.
+        The padding and border will overlap other words near the <span>
+        element. Horizontal padding, margins, and borders move other 
+        content away from the box.
+
+        Using 'display: inline-block;':
+
+        display: inline-block is a special value of display, 
+        which provides a middle ground between inline and block. 
+        Use it if you do not want an item to break onto a new line, 
+        but do want it to respect width and height and avoid the 
+        overlapping discussed above.
+
+        an elemnt with display: inline-block; does a subset of things
+        we already know about:
+
+        - The width and height will be respected.
+        - padding, margin, and border will cause other elements 
+        to be pushed away from the box!!!!!!
+
+        It does not, however, break onto a new line, and will only become 
+        larger than its content if you explicitly add 
+        'width' and 'height' properties.
+
+        
+        
+
+
+
+
+
+
+
+
+
 
