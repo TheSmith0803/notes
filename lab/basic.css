@@ -1,23 +1,27 @@
 .container {
-    padding: 5px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 120px;
+    background-color: rgb(0, 0, 56);
 }
 
-.home {
-    padding: 5px;
+.container > div {
+    padding: 20px;
     font-size: 30px;
-    background-color: black;
-    color: white;
+    border-radius: 35px;
 }
 
-.profile {
-    padding: 5px;
-    font-size: 30px;
-}
-
+.home,
 .search {
-    padding: 5px;
-    font-size: 30px;
     background-color: black;
-    color: white;
+    color: gray;
 }
+
+.profile,
+.about {
+    background-color: darkblue;
+    color: gray;
 }
+
+
+
