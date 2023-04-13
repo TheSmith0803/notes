@@ -1,0 +1,118 @@
+VARIABLES:
+
+    A variable is a "named storage" for data. 
+
+    In JS, use the 'let' keyword in order to create a variable.
+
+    ex. -- 'let message;'
+
+    you can then put data into a variable with the 
+    assignment operator -> '='
+
+    ex. -- 
+    let message;
+
+    message = 'Hello'; // store the string 'Hello' in the variable named message
+
+    You can now access the stored data in the variable with 
+    a declaration like this:
+    let message;
+    message = "Hello';
+
+    alert(message); // shows the variable content
+
+    to be more concise, you can put the var declaration and
+    assignment on the same line
+
+    ex.
+
+    let message = "Hello"
+
+    You can also declare multiple variables in one line:
+
+    ex. 
+
+    let user = 'John', age = 25, message = 'Hello';
+
+    However, that is not good practice.
+    Use a new line to declare each variable like so:
+
+    let user = 'John';
+    let age =25;
+    let message = 'Hello';
+
+    """!var!"""
+
+    the var keyword is ALMOST the same as let.
+    It also declares a variable, but in a slightly 
+    different 'old school' way.
+
+    If you try and redeclare a variable,
+    it will overwrite the previous declaration
+
+    ex.
+
+    let message;
+
+    message = 'Hello';
+
+    message = 'World!'; // value changed
+
+    alert(message);
+
+    We can also declare two variables and copy 
+    data from on into the other:
+
+    ex. 
+
+    let hello = 'Hello World';
+
+    let message;
+
+    message = hello; // copying 'Hello World' from hello into message
+
+    // now two variables hold the same data
+    alert(hello); // Hello world
+    alert(message); // Hello world
+
+    However, declaring twice will cause an error
+
+    ex. 
+
+    let message = 'This';
+
+    // repeated 'let' leads to an error 
+    let message = 'That'; // SyntaxError: 'message' has already been declared
+
+    Declare a variable once, and the refer to it without 'let'
+
+    Functional languages
+    
+    It’s interesting to note that there exist so-called pure 
+    functional programming languages, such as Haskell, that 
+    forbid changing variable values.
+
+    In such languages, once the value is stored “in the box”, 
+    it’s there forever. If we need to store something else, 
+    the language forces us to create a new box (declare a new 
+    variable). We can’t reuse the old one.
+
+    Though it may seem a little odd at first sight, these 
+    languages are quite capable of serious development. More 
+    than that, there are areas like parallel computations where 
+    this limitation confers certain benefits.
+
+VARIABLE NAMING:
+
+    There are two limitations on variable names in JavaScript:
+
+        1. The name must contain only letters, digits, or the 
+        symbols $ and _
+        2. The first character must not be a digits
+
+    examples of valid names:
+
+        let userName;
+        let test123; 
+
+    
